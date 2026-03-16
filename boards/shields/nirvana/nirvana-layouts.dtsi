@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    physical_layout_aaa: physical_layout_aaa {
+    physical_layout_nirvana: physical_layout_nirvana {
         compatible = "zmk,physical-layout";
         display-name = "Nirvana";
         keys  //                     w   h    x    y     rot    rx    ry
