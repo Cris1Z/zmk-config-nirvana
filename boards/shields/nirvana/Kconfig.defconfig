@@ -18,13 +18,6 @@ config BT_MAX_PAIRED
 
 endif
 
-if SHIELD_NIRVANA_RIGHT
-
-config INPUT_PINNACLE
-    default y
-
-endif
-
 if SHIELD_NIRVANA_LEFT || SHIELD_NIRVANA_RIGHT
 
 config ZMK_SPLIT

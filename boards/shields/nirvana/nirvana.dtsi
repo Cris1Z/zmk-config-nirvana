@@ -32,22 +32,22 @@
 / {
     encoder_left0: encoder_left0 {
         compatible = "alps,ec11";
-        steps = <12>;
+        steps = <24>;
         status = "disabled";
     };
     encoder_left1: encoder_left1 {
         compatible = "alps,ec11";
-        steps = <12>;
+        steps = <24>;
         status = "disabled";
     };
     encoder_right0: encoder_right0 {
         compatible = "alps,ec11";
-        steps = <12>;
+        steps = <24>;
         status = "disabled";
     };
     encoder_right1: encoder_right1 {
         compatible = "alps,ec11";
-        steps = <12>;
+        steps = <24>;
         status = "disabled";
     };
 
