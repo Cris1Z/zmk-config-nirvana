@@ -20,7 +20,7 @@ manifest:
       import: app/west.yml
       
     - name: zmk-input-gestures
-      remote: oleksandrmaslov
+      remote: Cris1Z
       revision: main
 
     # Add these if you want to use absolute mode:

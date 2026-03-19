@@ -53,9 +53,9 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         dr-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        y-invert;
+        //y-invert;
         sleep;
-        no-secondary-tap;
+        //no-secondary-tap;
         sensitivity = "2x";
         absolute-mode;
     };
