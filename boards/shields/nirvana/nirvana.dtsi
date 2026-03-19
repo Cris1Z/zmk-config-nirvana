@@ -89,5 +89,5 @@
     //tap-detection;
     inertial-cursor;
     inertial-cursor-velocity-threshold=<100>;
-    inertial-cursor-decay-percent=<50>;
+    inertial-cursor-decay-percent=<25>;
 };
