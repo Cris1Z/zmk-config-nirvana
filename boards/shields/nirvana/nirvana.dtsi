@@ -88,6 +88,6 @@
     // result in duplicate taps
     //tap-detection;
     inertial-cursor;
-    inertial-cursor-velocity-threshold=<100>;
+    inertial-cursor-velocity-threshold=<2>;
     inertial-cursor-decay-percent=<2>;
 };
