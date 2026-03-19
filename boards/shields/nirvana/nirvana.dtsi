@@ -3,6 +3,7 @@
 
 // to use gestures this is always necessary:
 #include <behaviors/input_processor_gestures.dtsi>
+#include <behaviors/input_processor_absolute_to_relative.dtsi>
 
 / {
     matrix_transform0: matrix_transform0 {

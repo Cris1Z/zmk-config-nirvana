@@ -57,5 +57,6 @@
         sleep;
         no-secondary-tap;
         sensitivity = "2x";
+        absolute-mode;
     };
 };
