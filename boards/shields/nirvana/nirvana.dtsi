@@ -5,6 +5,9 @@
 #include <behaviors/input_processor_gestures.dtsi>
 #include <behaviors/input_processor_absolute_to_relative.dtsi>
 
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
+
 / {
     matrix_transform0: matrix_transform0 {
         compatible = "zmk,matrix-transform";
