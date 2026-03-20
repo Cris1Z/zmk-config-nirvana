@@ -60,6 +60,31 @@
 };
 
 // Input devices
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;  // For relative input devices
+    track-remainders;             // Accumulate fractional movements
+    min-factor = <700>;          // 0.8x at very slow speeds
+    max-factor = <3000>;         // 3.0x at fast speeds
+    speed-threshold = <1200>;     // 1200 counts/sec for 1x
+    speed-max = <6000>;          // 6000 counts/sec for max accel
+    acceleration-exponent = <2>;  // Quadratic acceleration curve
+};
+
+&zip_gestures {
+    // Activate gestures and change their configuration as you see fit.
+    // for details, see the section below that describes all gestures and
+    // their configuration options.
+
+    // This will create a mouseclick if your touch is short enough.
+    // if you're running in relative mode and don't use no-taps, this might
+    // result in duplicate taps
+    //tap-detection;
+    //tap-timout-ms=<200>;
+    inertial-cursor;
+    inertial-cursor-decay-percent=<50>;
+};
+
 / {
     split_inputs {
         #address-cells = <1>;
@@ -77,18 +102,4 @@
         status = "disabled";
         device = <&input_split_right0>;
     };
-};
-
-&zip_gestures {
-    // Activate gestures and change their configuration as you see fit.
-    // for details, see the section below that describes all gestures and
-    // their configuration options.
-
-    // This will create a mouseclick if your touch is short enough.
-    // if you're running in relative mode and don't use no-taps, this might
-    // result in duplicate taps
-    //tap-detection;
-    //tap-timout-ms=<200>;
-    inertial-cursor;
-    inertial-cursor-decay-percent=<50>;
 };

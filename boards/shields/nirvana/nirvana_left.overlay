@@ -39,16 +39,6 @@
 // Input devices on peripheral parts
 // Enabling input listeners and input-split to receive input events from peripherals
 
-&pointer_accel {
-    input-type = <INPUT_EV_REL>;  // For relative input devices
-    track-remainders;             // Accumulate fractional movements
-    min-factor = <700>;          // 0.8x at very slow speeds
-    max-factor = <3000>;         // 3.0x at fast speeds
-    speed-threshold = <1200>;     // 1200 counts/sec for 1x
-    speed-max = <6000>;          // 6000 counts/sec for max accel
-    acceleration-exponent = <2>;  // Quadratic acceleration curve
-};
-
 &input_split_right0 { 
     status = "okay"; 
 };
