@@ -10,7 +10,8 @@
             bindings = <&msc>, <&msc>;
             tap-ms = <40>;
         };
-    }
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
