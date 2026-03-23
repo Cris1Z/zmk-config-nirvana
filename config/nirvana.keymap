@@ -3,27 +3,28 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    behaviors{
+    behaviors {
         scroll: scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
+
             tap-ms = <40>;
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
             bindings = <
-&kp A           &kp A           &kp F2            &kp F3        &kp F4  &kp F5       &kp F8      &kp F9  &kp F10      &kp F11  &kp A  &kp A
-&kp F1          &kp W           &kp E             &kp R         &kp T   &kp F6       &kp F7      &kp Y   &kp U        &kp I    &kp O  &kp F12
-&kp Q           &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F   &kp G   &kp D        &kp E       &kp H   &mt RCTRL J  &kp H    &kp I  &kp P
-&mt LEFT_WIN A  &kp X           &kp C             &kp V         &kp B   &kp COMMA    &kp PERIOD  &kp N   &kp M        &kp A    &kp A  &kp V
-&kp Z           &kp X           &kp Y             &kp UP_ARROW  &kp A   &kp B        &kp C       &kp D   &kp E        &kp F    &kp G  &kp RCTRL
-&kp A           &kp J           &kp K             &kp L                                                  &kp M        &kp N    &kp O  &kp A
+&gresc          &kp A           &kp NUMBER_2      &kp NUMBER_3  &kp NUMBER_4     &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9       &mkp MB3         &kp DELETE
+&kp NUMBER_1    &kp W           &kp E             &kp R         &kp T            &kp A           &kp A         &kp Y         &kp U         &kp I              &kp O            &kp NUMBER_0
+&kp Q           &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F   &kp G            &kp A           &kp A         &kp H         &mt RCTRL J   &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &kp P
+&mt LEFT_WIN A  &kp X           &kp C             &kp V         &kp B            &kp COMMA       &kp PERIOD    &kp N         &kp M         &kp A              &kp A            &mt RIGHT_WIN SEMICOLON
+&kp Z           &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &kp A           &kp A         &kp A         &kp A         &kp A              &kp A            &kp RCTRL
+&kp A           &kp SPACE       &kp A             &kp TAB                                                                    &kp A         &kp BACKSPACE      &kp ENTER        &kp A
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT &scroll MOVE_Y(40) MOVE_Y(-40) &scroll MOVE_X(-40) MOVE_X(40)>;
