@@ -1,7 +1,16 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors{
+        scroll: scroll {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+            tap-ms = <40>;
+        };
+    }
     keymap {
         compatible = "zmk,keymap";
 
@@ -16,7 +25,7 @@
 &kp A           &kp J           &kp K             &kp L                                                  &kp M        &kp N    &kp O  &kp A
             >;
 
-            sensor-bindings = <&inc_dec_kp A B &inc_dec_kp C D &inc_dec_kp E F &inc_dec_kp G H>;
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT &scroll MOVE_Y(40) MOVE_Y(-40) &scroll MOVE_X(-40) MOVE_X(40)>;
         };
 
         layer_1 {
@@ -28,6 +37,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT &scroll MOVE_Y(40) MOVE_Y(-40) &scroll MOVE_X(-40) MOVE_X(40)>;
         };
     };
 };
