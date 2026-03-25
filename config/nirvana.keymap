@@ -71,7 +71,7 @@
         };
 
         layer_1 {
-            displa-name = "NAV&NUM"
+            displa-name = "NAV&NUM";
             bindings = <
 &trans       &trans    &trans    &trans     &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &kp HOME  &kp UP    &kp END    &kp PAGE_UP    &trans    &trans  &trans  &kp N7  &kp N8  &kp N9  &trans
