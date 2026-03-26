@@ -29,14 +29,14 @@
 
         combo_lbkt {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <26 25>;
+            key-positions = <15 27>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_rbkt {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <33 34>;
+            key-positions = <20 32>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -57,7 +57,7 @@
 
         combo_0 {
             bindings = <&kp N0>;
-            key-positions = <33 34>;
+            key-positions = <32 20>;
             timeout-ms = <50>;
             layers = <1>;
         };
