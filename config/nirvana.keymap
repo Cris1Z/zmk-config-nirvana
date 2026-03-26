@@ -43,14 +43,14 @@
 
         combo_slash {
             bindings = <&kp SLASH>;
-            key-positions = <41 28>;
+            key-positions = <27 39>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_bslh {
             bindings = <&kp BSLH>;
-            key-positions = <42 31>;
+            key-positions = <32 44>;
             timeout-ms = <50>;
             layers = <0>;
         };
