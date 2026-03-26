@@ -9,13 +9,13 @@
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&kp COMMA>;
-            layers = <0>
+            layers = <0>;
         };
         combo_period {
             timeout-ms = <50>;
             key-positions = <32 33>;
             bindings = <&kp PERIOD>;
-            layers = <0>
+            layers = <0>;
         };
     };
 };
