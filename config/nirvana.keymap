@@ -3,6 +3,24 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_comma {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp COMMA>;
+            layers = <0>
+        };
+        combo_period {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp PERIOD>;
+            layers = <0>
+        };
+    };
+};
+
+/ {
     behaviors {
         scroll: scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
@@ -82,7 +100,7 @@
             >;
 
             sensor-bindings = <
-                &inc_dec_kp UP DOWN 
+                &inc_dec_kp C_VOL_UP C_VOL_DN 
                 &inc_dec_kp LEFT RIGHT 
                 &scroll MOVE_Y(40) MOVE_Y(-40) 
                 &scroll MOVE_X(-40) MOVE_X(40)
@@ -90,6 +108,7 @@
         };
 
         layer_2 {
+            display-name = "MOUSE";
             bindings = <
 &trans  &trans  &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
