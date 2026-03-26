@@ -152,6 +152,7 @@
         };
 
         layer_2 {
+            display-name = "FN";
             bindings = <
 &trans          &trans      &kp LS(LC(F2))  &kp LS(LC(F3))  &kp LS(LC(F4))  &kp LS(LC(F5))    &kp RS(RC(F8))  &kp RS(RC(F9))  &kp RS(RC(F10))  &kp RS(RC(F11))  &trans       &trans
 &kp LC(LS(F1))  &kp LC(F2)  &kp LC(F3)      &kp LC(F4)      &kp LC(F5)      &kp LS(LC(F6))    &kp RS(RC(F7))  &kp RC(F8)      &kp RC(F9)       &kp RC(F10)      &kp RC(F11)  &kp RS(RC(F12))
