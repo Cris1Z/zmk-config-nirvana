@@ -46,7 +46,7 @@
 &input_listener_right0 { 
     status = "okay"; 
     input-processors = <
-        //&zip_gestures
+        &zip_gestures
         &zip_absolute_to_relative
         &pointer_accel 
         //&zip_xy_scaler 3 2
