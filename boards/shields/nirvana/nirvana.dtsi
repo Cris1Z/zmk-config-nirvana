@@ -72,11 +72,11 @@
     // This will create a mouseclick if your touch is short enough.
     // if you're running in relative mode and don't use no-taps, this might
     // result in duplicate taps
-    tap-detection;
-    tap-timout-ms=<150>;
-    prevent_movement_during_tap;
+    //tap-detection;
+    //tap-timout-ms=<150>;
+    //prevent_movement_during_tap;
     inertial-cursor;
-    inertial-cursor-decay-percent=<30>;
+    inertial-cursor-decay-percent=<20>;
 };
 
 &pointer_accel {
@@ -84,7 +84,7 @@
     track-remainders;             // Accumulate fractional movements
     min-factor = <700>;          // 0.8x at very slow speeds
     max-factor = <2500>;         // 3.0x at fast speeds
-    speed-threshold = <2500>;     // 1200 counts/sec for 1x
+    speed-threshold = <3000>;     // 1200 counts/sec for 1x
     speed-max = <6000>;          // 6000 counts/sec for max accel
     acceleration-exponent = <2>;  // Quadratic acceleration curve
 };
