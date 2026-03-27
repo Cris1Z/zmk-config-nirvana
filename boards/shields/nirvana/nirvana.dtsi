@@ -73,7 +73,8 @@
     // if you're running in relative mode and don't use no-taps, this might
     // result in duplicate taps
     tap-detection;
-    tap-timout-ms=<300>;
+    tap-timout-ms=<150>;
+    prevent_movement_during_tap;
     inertial-cursor;
     inertial-cursor-decay-percent=<30>;
 };
