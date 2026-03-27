@@ -36,22 +36,22 @@
 / {
     encoder_left0: encoder_left0 {
         compatible = "alps,ec11";
-        steps = <12>;
+        steps = <24>;
         status = "disabled";
     };
     encoder_left1: encoder_left1 {
         compatible = "alps,ec11";
-        steps = <12>;
+        steps = <24>;
         status = "disabled";
     };
     encoder_right0: encoder_right0 {
         compatible = "alps,ec11";
-        steps = <12>;
+        steps = <24>;
         status = "disabled";
     };
     encoder_right1: encoder_right1 {
         compatible = "alps,ec11";
-        steps = <12>;
+        steps = <24>;
         status = "disabled";
     };
 
@@ -83,7 +83,7 @@
     track-remainders;             // Accumulate fractional movements
     min-factor = <600>;          // 0.8x at very slow speeds
     max-factor = <2500>;         // 3.0x at fast speeds
-    speed-threshold = <2000>;     // 1200 counts/sec for 1x
+    speed-threshold = <1400>;     // 1200 counts/sec for 1x
     speed-max = <5000>;          // 6000 counts/sec for max accel
     acceleration-exponent = <2>;  // Quadratic acceleration curve
 };
