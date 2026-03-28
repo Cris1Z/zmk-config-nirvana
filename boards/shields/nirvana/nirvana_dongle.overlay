@@ -12,11 +12,25 @@
 &physical_layout_nirvana {
     kscan = <&kscan_dongle>;
 };
+
 // == Input devices ==
 // Input devices on peripheral parts
 // Enabling input listeners and input-split to receive input events from peripherals
-&input_split_right0 { status = "okay"; };
-&input_listener_right0 { status = "okay"; };
+
+&input_split_right0 { 
+    status = "okay"; 
+};
+
+&input_listener_right0 { 
+    status = "okay"; 
+    input-processors = <
+        &zip_gestures
+        &zip_absolute_to_relative
+        &pointer_accel 
+        //&zip_xy_scaler 3 2
+        &zip_temp_layer 3 300
+    >;
+};
 
 // Assigning dummy pins to other part's encoders
 // just to satisfy the devicetree requirements.

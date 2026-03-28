@@ -35,13 +35,13 @@ include:
 ## See ZMK documentation on how to build and flash the firmware for dongle mode.
 ## The "board" for the dongle can be anything ZMK supports.
 
-#  - board: nice_nano_v2
-#    shield: nirvana_dongle
+  - board: nice_nano_v2
+    shield: nirvana_dongle
 
-#  - board: nice_nano_v2
-#    shield: nirvana_left
-#    snippet: nirvana-left-as-peripheral
-#    artifact-name: nirvana_left_as_peripheral
+  - board: nice_nano_v2
+    shield: nirvana_left
+    snippet: nirvana-left-as-peripheral
+    artifact-name: nirvana_left_as_peripheral
 
 #  - board: nice_nano_v2
 #    shield: nirvana_dongle
