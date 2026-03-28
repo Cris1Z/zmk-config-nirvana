@@ -14,6 +14,8 @@ manifest:
       url-base: https://github.com/oleksandrmaslov/
     - name: janpfischer
       url-base: https://github.com/janpfischer
+    - name: carrefinho                            # <--- add this
+      url-base: https://github.com/carrefinho     # <--- and this
 
 
     # Additional modules containing boards/shields/custom code can be listed here as well
@@ -44,6 +46,10 @@ manifest:
     - name: zmk-dongle-screen
       remote: janpfischer
       revision: main
+    
+    - name: prospector-zmk-module                 # <--- and these
+      remote: carrefinho                          # <---
+      revision: main                              # <---
 
 #    - name: zmk-dongle-test
 #      remote: Cris1Z
