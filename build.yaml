@@ -41,7 +41,7 @@ include:
 ## See ZMK documentation on how to build and flash the firmware for dongle mode.
 ## The "board" for the dongle can be anything ZMK supports.
 
-  - board: nice_nano_v2
+  - board: seeeduino_xiao_ble
     shield: nirvana_dongle
 
   - board: nice_nano_v2
