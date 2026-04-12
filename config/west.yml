@@ -43,17 +43,17 @@ manifest:
       remote: oleksandrmaslov
       revision: main
 
-    - name: zmk-dongle-screen
-      remote: janpfischer
-      revision: main
+#    - name: zmk-dongle-screen
+#      remote: janpfischer
+#      revision: main
     
     - name: prospector-zmk-module                 # <--- and these
       remote: carrefinho                          # <---
       revision: fix/stability                     # <---
 
-#    - name: zmk-dongle-test
-#      remote: Cris1Z
-#      revision: main
+    - name: zmk-dongle-screen
+      remote: Cris1Z
+      revision: main
 
   self:
     path: config
