@@ -30,7 +30,6 @@ include:
     snippet: zmk-usb-logging #only enable for debugging
     #artifact-name: dongle-screen
 
-
 ## To build with ZMK Studio support, uncomment the following block
 ## by removing the leading '#' from each line.
 
