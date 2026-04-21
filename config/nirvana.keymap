@@ -62,6 +62,11 @@
             timeout-ms = <50>;
             layers = <3>;
         };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 12>;
+        };
     };
 };
 
@@ -104,10 +109,12 @@
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
+            tapping_term_ms = <0>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <150>;
         };
 
         td0: td0 {
@@ -121,7 +128,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD1";
             #binding-cells = <0>;
-            bindings = <&kp LWIN>, <&sl 2>;
+            bindings = <&kp ENTER>, <&sl 2>;
         };
     };
 
@@ -131,12 +138,12 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&lt 1 GRAVE      &kp CAPS         &as LS(N2) N2      &as LS(N3) N3  &as LS(N4) N4    &as LS(N5) N5          &as LS(N6) N6          &as LS(N7) N7  &as LS(N8) N8    &as LS(N9) N9       &mkp MB3           &kp DELETE
+&lt 1 ESCAPE     &kp CAPS         &as LS(N2) N2      &as LS(N3) N3  &as LS(N4) N4    &as LS(N5) N5          &as LS(N6) N6          &as LS(N7) N7  &as LS(N8) N8    &as LS(N9) N9       &mkp MB3           &kp DELETE
 &as LS(N1) N1    &kp W            &kp E              &kp R          &kp T            &as LS(MINUS) MINUS    &as RS(EQUAL) EQUAL    &kp Y          &kp U            &kp I               &kp O              &as LS(N0) N0
 &kp Q            &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LCTRL F   &kp G            &as LS(SEMI) SEMI      &as RS(SQT) SQT        &kp H          &hmr RCTRL J     &hmr RIGHT_SHIFT K  &hmr RIGHT_ALT L   &kp P
-&hml LEFT_WIN A  &kp X            &kp C              &kp V          &kp B            &as LS(COMMA) COMMA    &as RS(PERIOD) PERIOD  &kp N          &kp M            &as RS(FSLH) FSLH   &as RS(BSLH) BSLH  &hmr RIGHT_WIN RC(ENTER)
-&kp Z            &kp LEFT_ARROW   &kp DOWN_ARROW     &kp UP_ARROW   &kp RIGHT_ARROW  &tog 1                 &sl 2                  &kp RS(TAB)    &kp RC(RS(TAB))  &kp RC(TAB)         &kp TAB            &kp RCTRL
-&kp C_MUTE       &lt 1 SPACE      &td1               &kp LEFT_ALT                                                                                 &kp RIGHT_SHIFT  &lt 1 ENTER         &kp BACKSPACE      &td0
+&hml LEFT_WIN A  &kp X            &kp C              &kp V          &kp B            &as LS(COMMA) COMMA    &as RS(PERIOD) PERIOD  &kp N          &kp M            &as RS(FSLH) FSLH   &as RS(BSLH) BSLH  &hmr RIGHT_WIN ENTER
+&kp Z            &kp LEFT_ARROW   &kp DOWN_ARROW     &kp UP_ARROW   &kp RIGHT_ARROW  &tog 1                 &sl 2                  &kp RS(TAB)    &kp RC(RS(TAB))  &kp RC(TAB)         &kp TAB            &kp RIGHT_ALT
+&kp C_MUTE       &lt 1 SPACE      &td1               &kp LEFT_ALT                                                                                 &kp RIGHT_SHIFT  &lt 1 RCTRL         &kp BACKSPACE      &td0
             >;
 
             sensor-bindings = <
@@ -150,12 +157,12 @@
         layer_1 {
             display-name = "NAV&NUM";
             bindings = <
-&trans       &trans    &trans    &trans     &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &kp HOME  &kp UP    &kp END    &kp PAGE_UP    &trans    &trans  &trans  &kp N7  &kp N8  &kp N9  &trans
-&kp LS(TAB)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &trans    &trans  &kp N0  &kp N4  &kp N5  &kp N6  &trans
-&kp TAB      &trans    &trans    &trans     &trans         &trans    &trans  &trans  &kp N1  &kp N2  &kp N3  &trans
-&trans       &trans    &trans    &trans     &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans    &trans    &trans                                              &trans  &trans  &trans  &trans
+&trans       &trans    &trans    &trans     &trans         &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &kp HOME  &kp UP    &kp END    &kp PAGE_UP    &trans           &trans  &trans  &kp N7  &kp N8  &kp N9  &trans
+&kp LS(TAB)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &kp BACKSPACE    &trans  &kp N0  &kp N4  &kp N5  &kp N6  &trans
+&kp TAB      &trans    &trans    &trans     &trans         &kp DELETE       &trans  &trans  &kp N1  &kp N2  &kp N3  &trans
+&trans       &trans    &trans    &trans     &trans         &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans    &trans    &trans                                                     &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <
